@@ -84,3 +84,10 @@
 916	1422	6664893183794894	holyChess.exe	674967b28fdfce90
 2	795	6664893471387121	CMakeFiles/holyChess.dir/src/holy_chess.cpp.obj	4b10c3eb746be90c
 795	1300	6664893476386104	holyChess.exe	674967b28fdfce90
+3	852	6664905463361407	CMakeFiles/holyChess.dir/src/main.cpp.obj	7acff0716fc7692
+16	916	6664905464013791	CMakeFiles/holyChess.dir/src/board.cpp.obj	fd8b3ebcb2b197e0
+18	972	6664905464565438	CMakeFiles/holyChess.dir/src/holy_chess.cpp.obj	4b10c3eb746be90c
+14	983	6664905464665710	CMakeFiles/holyChess.dir/src/piece.cpp.obj	e1c180ded6503cf0
+983	1458	6664905469361882	holyChess.exe	674967b28fdfce90
+3	793	6664906040763478	CMakeFiles/holyChess.dir/src/holy_chess.cpp.obj	4b10c3eb746be90c
+793	1266	6664906045463681	holyChess.exe	674967b28fdfce90

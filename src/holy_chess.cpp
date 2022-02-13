@@ -33,7 +33,7 @@ void Chess::run(std::string title, int width, int height, int flags) {
 
 void Chess::update() {
     if (states::is_move) {
-        this->pieces[int((states::new_pos.x / 100) * 8 + (states::new_pos.y / 100))].set_id(this->pieces[states::n].get_id());
+        this->pieces[states::n].setPosition(this->mouse.x - states::dx, this->mouse.y - states::dy);
     }
 }
 
