@@ -8,6 +8,7 @@
 #include "piece.h"
 #include "board.h"
 #include <string>
+#include <vector>
 #include <SFML/Window/Event.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Graphics/RectangleShape.hpp>
@@ -34,13 +35,6 @@ namespace holy {
         Board board;
         Piece* pieces;
         Piece current_piece;
-
-        struct states {
-            static int n;
-            static float dx, dy;
-            static bool turn, is_move;
-            static sf::Vector2f old_pos, new_pos;
-        };
     };
 }
 

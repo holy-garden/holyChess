@@ -10,22 +10,21 @@ Board::Board() {
 }
 
 void Board::initialize_board() {
-    int iter = 0;
+    int n = 0;
     for (int i = 0; i < 8; i++) {
         for(int j = 0; j < 8; j++) {
             int id = board[i][j];
+
             int x = std::abs(id) - 1;
             int y = id > 0 ? 1 : 0;
-
-            this->pieces[iter] = Piece(j * 100, i * 100, id);
-            this->pieces[iter].texture_manager(x * 100, y * 100);
-
-            iter++;
+            this->pieces[i * 8 + j] = Piece(j * 100, i * 100, id);
+            this->pieces[i * 8 + j].texture_manager(x * 100, y * 100);
+            this->pieces[i * 8 + j].set_is_empty(id != 0);
         }
     }
 }
 
-Piece *Board::get_pieces() {
+Piece* Board::get_pieces() {
     return this->pieces;
 }
 

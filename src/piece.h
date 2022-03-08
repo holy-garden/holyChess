@@ -17,10 +17,13 @@ public:
     Piece() = default;
     Piece(int x, int y, int id);
 
-    void set_id(int id);
     int get_id();
-    bool king(sf::Vector2f& from, sf::Vector2f& to);
+    void set_id(int id);
 
+    bool is_empty();
+    void set_is_empty(bool is_empty);
+
+    bool king(sf::Vector2f& from, sf::Vector2f& to);
     bool pawn(sf::Vector2f& from, sf::Vector2f& to);
     bool rook(sf::Vector2f& from, sf::Vector2f& to);
     bool queen(sf::Vector2f& from, sf::Vector2f& to);
@@ -38,6 +41,7 @@ public:
 
 private:
     int id;
+    bool empty;
     sf::Texture texture;
     std::vector<sf::Vector2f> legal_moves;
 };

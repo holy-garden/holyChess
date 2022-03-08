@@ -146,10 +146,12 @@ bool Piece::is_valid_move(sf::Vector2f& from, sf::Vector2f& to) {
 }
 
 void Piece::make_move(sf::Vector2f& from, sf::Vector2f& to) {
-    if (!this->is_valid_move(from, to))
+    if (!this->is_valid_move(from, to)) {
         this->setPosition(from.x, from.y);
-    else
+    }
+    else {
         this->setPosition(to.x, to.y);
+    }
 }
 
 bool Piece::is_out_of_bounds(sf::Vector2f& to) {
@@ -164,4 +166,12 @@ void Piece::set_legal_moves(std::vector<sf::Vector2f>& legal_moves) {
 
 std::vector<sf::Vector2f> Piece::get_legal_moves() {
     return this->legal_moves;
+}
+
+bool Piece::is_empty() {
+    return this->empty;
+}
+
+void Piece::set_is_empty(bool is_empty) {
+    this->empty = is_empty;
 }
